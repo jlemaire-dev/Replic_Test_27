@@ -1,0 +1,191 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Login
+ major_version : 27
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Login
+ identifier : 0x233bf7f91d903b0f
+ internal_properties : BwAAAAcAAABfcRRIKLV/ckU7gvpTktMnvic5aWEOjVRNm+ywdecALQ1XY5PM3AdOdNAPAa30tLya4EA9rpKMXfgy2FCCTyM14Evmgmq5pmwreG36mQI3YLuU24dpiNREoZ5HFYgG0omXpYJBKfyYUjzj8svsH9wdjZFNRl3bHnP7ct3TJIbJuaYMTiS/TleVYhEAGR6YOmx27AOXGkJcAj/UB2IOtF0hxmez5MdDbRKInpGye0G3WLlOqQ4ZtDrnKZtE9hT1qkGqycHnbKxfpvGaPZq2bwNCqqw6E7RedRsNrfIInW9t2LB1YFJQnzew3fGnuDgg66bMSlXYG8tACvNf+kzA2VLspKSkSO9gFetRGiHas8arPRHwJF1yzgW/O8fzdKs1jREVfV0uzjAxH8jVjFyNcWhO3oCodtoeOMMXt5xykHC8penRcVzpIYD/ww9Xu5j2xjoW3K/lqBn53QSt4L6KY92kl/suXwfLd9RzILe3epRBz4g3N7wMud3qX0uQaAHqLntXR0LmLQ0zvXkm9dqHfvbLN3yHWK1EuULdSeQSNxkP2P07Xz1qFIZjQhTAQDdMmTciCkuTEK7YySrnCF3r+lV1N8tmuTAMtc04N5q74o1K4cHRckByEFITkGfplTwEeqBBn/Y9oes8
+ properties :
+  width : 800
+  height : 570
+  widthClient : 798
+  heightClient : 568
+ controls :
+  -
+    name : BTN_Connexion
+    identifier : 0x233bf8031d985f50
+    internal_properties : BwAAAAcAAADdz/vhi1zpN1pPJVxBiPMcgVG8wGtAep/6tfT9ARlGqTlFI0tzkmw7xdaXG4bXlGFOU550BuGk8krDLh5LZw/32rAch3LQE6NW9EE8We6HKTokIRTtLQp8yEF3Lz0E6rpyvRFsJpQ3UqVTNQoYKtSHEZFepKForhD5mgskRLPht90XTzjP0LRtwuBiOhlbbcOX6bkoBZTpHIKmOH5mdaJX5c6B1U/a50ccxQmw2GpBNVIN99RZnDtgmyqmi9G5WmIee5ww14h9UkcEwkKUljcTPEmU0aFG/waakRLqxZZu2mm2GDvyaU7W9+DFoPZYzHeCdOV/B4CBh+GtC8UUQGBFLQSAFjotbYExOfpT/8J+O6da80NKHxtQSc9LvsPUUTTIv+ojG6KqUsQ0xFnUkELStTxA5luknGXqu5AAymLfNL3WDWgB47RhNItW9PtGL7ydMGDtni1Ogzq127gWD+nZqna9mhLjGObhCZEZ4pUFq6RIrJbdM5MClbdQQZ5vzXv/aAVRgpkghgD5Mv17yIxgr6+AbO6wBZd3XtZKBJ8+aeed4OKSs/YIXQXcXpV15jOJpOrqRo+mOOMeCVPJm6U9uS+65vqv5n5c4/f3Q00OG+0+T493ul2ViTb86hWr2Pz5WdL5m4HyYYW/3oZ8OaKJQhyg2jhw0HxUDkFpSRt8cTVigo4tr+f4QUhlxn4pqkpVxxcc2g8AtusCYqtq8G/vlH70/Nr5NZmb582P1xC6hnTsk9GApzB/TJ1uBpFLwEtT3fjiJyND/yhan3sjM7xdoNAoOI9wexBerraQDp7YKxPVeySIuHjmoqNucZvxi/zL98Vo77toKMWCIATPAMHX6FLWyCUjlRLF2/VfKCk16cKG+0unMGH0xb0iBynqdzHljiAsiv7Rwfcv
+    properties :
+     x : 250
+     y : 442
+     width : 299
+     height : 36
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         selon COMBO_Connexion
+         	CAS 1
+         		TypeDeConnexionEnCours = ConnexionLocale
+         	CAS 2
+         		TypeDeConnexionEnCours = ConnexionServeur	
+         FIN
+         
+         //On met en place la connexion à la BDD
+         gProc_SeConnecterALaBDD(TypeDeConnexionEnCours)
+         
+         utilise(FEN_FORMULAIRE_TEST)
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : LIB_Bienvenue_dans_le_logiciel
+    identifier : 0x233bf80b1d9b815f
+    internal_properties : BwAAAAcAAADKGDYYy9GfDTJ8/D9qPTG4qavla5UlFKzjKz0b80uFy0flnKOGLfZUuDmL8kg9onG01CjfBLLsLTH6U3B0RZ/9dsbHROHi4gcBHMB8NOXSqqIO55OTFzx4m72s0UZGnLXlkhjV/SytYHz8ZoJbqAjjeCNRPgkh9cQ5rQXOitECHfWzU23z6Ct0JCVVBdEDwKAeyNN2UwezIGQAB+4MCrjk8n8dRJ8VwQAnhIh+J7fLwI0Qme2J09ZM/igLyJVS1m7g/ZYCspO2T07SiNknLKqLgHGC9EyhDfyYRzC60LbGfkv7qK5rKckXHJ89DYGVsFB7ZsXdStwGk4ZplaccU/ocIGuTvLJnSQCyJ48ZebMjI589rpdlrJ9IKYKzzWs/RYibPsbPeKhNW79S2T2u0qz7xHEpsaeIAUDxpmAgkRNXfebCIW6zIs9w8EOvjE/mEgVJ6XyEN+RR0P7sEKSnKrBk9k0VOKGxkPqoacWxunvHKM0EHc8KQFfzoQBkB0F2
+    properties :
+     x : 141
+     y : 21
+     width : 517
+     height : 72
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : COMBO_Connexion
+    identifier : 0x233bf85b1dbbb626
+    internal_properties : BwAAAAcAAADpxP7oMHLoaiKUk9taWUsSes1+ZieMr+xALsLGW6+pW5OQK3fHBhTa9e/JtTQcX/3Zqb3kRAEQKLKKlvxeCNE8/skHNjUPKxJ+ZcwY8F87n+yYzBWrfB+OUD+r/+J4WMDlMlq94+saFjdgXtMEqTcKk72Z/vGVIpf2hFP5HWSyFoktiT/l0wGZCI3J5aLQithEncv4826rd3j4h0snmS7+DcS//OIvR5GEukcQ6NEciTHi+wmEZigETbOMwjPj4433r7oF7SPHRPx7LhUb4rhFVv5bHIAq9EAFCGMuAqVm+LAty6hZubDy+2OhAkGNWd8mVYYYhNYg79X/gzAA1wKD0b9cO/Mqel8BAWAuGCRm3r/Kcu4gV/+z+91Lsf0l+LWTIBokIDc3f1fwLfdaKhNWsgSUYcCmFGZg7cnLY9w3FoixSsI0/hRwkJGoKEAOw7dIhS4lbFChr6ShBDONqdh+6kkd3WPotRatN/mq5SbrHFvD+x6tpvX7NoliAtG8czzV+gZmprhNYNqxj7S7oH/iO/njDuygPz7IYmuYhjK6rDE4hBihxHzlns6YS3sgXUqY0nuH/jP0Etpo3pmDW/8LKMbgcrgseLN4duIR9hpgxfoTvp0ANiRsdmW6tix9Y9oD4LhYNnq2GmjkE8ga3riQaJGKftW0lELZZB2Rt8WBGRiRDCS8ozOzzsFXVWuec7ZSg5/Dk8KCJ8nLsp+jmOgvpheBKh3uZ0TaDGe/SgYK0ESP06Y/uEQ1+rukMXnaWiE785K05KymzDOtyZbfssxz5BEhoYo5It59KsaPOFdJvvWyLf1CGsh6CvtnhTUD6LdxPSEtSzCO5ar+CEPyHJlqLN9krCFkhX6s8KT27nUEtrAp1l4dz2nB92lr4I5cJRRTSwXhPEVPaF1LlrtPW5TaBHRchYTz7QUIgoRE7NYDHWd4BA2/xujBeeLGou8OPHXyLGqOLgOd1Dk1+t0mu0XJ61pKopyrArJLS63/SrgMZEQJo2Zd74KSREPOnGqPRuGDJwTBfjD5aVEvtJQdxV8bf2InnAVqwW4off9N/CjhkrtcdUGGG+4/N5GQMHw3k2n9P4hezpzGDk8iT/ilDfGQZWg4v3je4Br1P7dIs+i2v+o+MwcDlCdmq61iOF6IhA6cOlapomNaLJkxvykDskPEVpKjoB189qM44a3BVwO9JwM+F5uTiWlEW00dKnQ8e92l2MEJ59KYpqbhxwlj5dxlpY7qkHuDirabgLRk8hKDhlGIzekyCLuBSIhRTy4Tr+nGMzr/qp3I5Q8Cbk+Jh8ZzKDO6H+DO27tSVUDCKDVKH2UGbLUdSyQ5EqKXeX9qJUDCMJURgomkJYj4xRdnaSY8u8ojPQUzgH7EGuR/9JouCx+gwt9GKuYiax+JRD9okqV5c2bsG7qo7NISyQo5hQN3I3y6j96fRQ0lwEOcSxqxhZqfaKy7gZCNIby1L09OW5o/BArJ9xB3AapQ0bLXr5ZY5x8z9jiURHHd3gWDypsHXJn5tG6lizIFQrJ8SL3P+SV+jtKMikMI/DTQnkPrR5oIqkheCZxLpWfeUiGKlKf+IvqmEE49ioK8OqfE9xKruqCDEjGaJrWWbXD/7ptUGia0tXmSDHd4Rhs7ShsW7QD8KJRGy5oJxfAiiuW6YrAtLb6xz8gdROrln1+taGYNJnv+wN9/hhkMyjDCN58MY+rRC8LlXMUEY/Izk2oQDTWwY8yT8Ksbn1WDSjXZo2YfPdQaaY38W8vi5YpY/McL8i3cQx3q0QqRQ3SJZ51Hi2PrVKxd
+    properties :
+     x : 218
+     y : 403
+     width : 362
+     height : 33
+    dropdown :
+     internal_properties : BwAAAAcAAADL3cC7k6XdpxJ0JblnAZGiRR6WWhtBLPOzVSYK6d1jPdhblRadTMTCp2bIKiZhe72DefErEIzK3zlzTS7OPn3nC2giOJy2T/51g1Q5rXMnpdc1xC6vFr5jD3hG9cZrDHhFkQClDH7HnITuH2hA9yhS/PYqgZH9Ri58IKfFX4fXD0k8RsiuV13sHhnawuurs2sJ+yvr81d2oNreY+v4vpDHas7fMUd2vBzYhy+n4lIdqCMPOCFomLncBUrb7tnS+iXFrUmKtGJVCQEf5P11c0l72k9kOWwlCc6UEkfZIDvcdiUBwFt0n6mH1TWqhKGnO1vQ6xuXPkVJqvzC4p/F2qMCuQYXf8lWTuQ/UWQASm5q4KoCegpibGUcQ1eQShFwmr9TcRK1iktBg1sst2ZvRCG6Xut7+39ay4EKJNHwj1PQmdgdTT1eJ4ViSb9isSnEoroKx1kwX1qy9q6wb3OssWjS0UB5gt0Be+amxHAwzEjqk1cu2fzLJn2L287HC+bbGu6uBnUxGDHfUcY/S0ApKwThUf0zIkFP5qxIPJs2K2mYacSAfifi5xzW2mzJb13fPjJri5CB0VJZb7WorDUVZ0dH8rj/56T9FTESnvZDguG4Ju3c/wrVKtYUmXS6l4xg8piDhFZS5PeAwkXEB0xF13MarGkQlfBlHzkDXHeNUf1VZDOWodGUDrh4bCR5OTvXxaZyJPF1qDhikxi7yh9JxTh62dhH3+rju2r5c5FUgzVon8gJFBk4qfmbF+vKygXxQNccMO5Y3v8icaUVIUzYtPPncPkDl/wj2miGxm8Ryz8p2KYznykpIz2hWw==
+     type : 7
+    type : 14
+    code_elements :
+     type_code : 23
+     p_codes :
+      -
+        code : |1+
+         MoiMême = 2 // On sélectionne la connexion serveur par défaut
+        type : 14
+      -
+        type : 35
+        enabled : false
+      -
+        type : 17
+        enabled : false
+  -
+    name : IMG_Kisspng_replication_freenas_zfs_file_system_snapshot_high_tech_5adab304ab5673_7165830815242821167018
+    identifier : 0x233bf8c31dcb4ee6
+    internal_properties : BwAAAAcAAABwCRQo1KQpicw/hCX3esG4cPCiNh7GvjFwPjhi0p7RnSLgcJxL8WrrD47iwoMR2vSBZrOF8uPBM2wgY9n3upRnjeoOqZ99+IJFlyjqMRU9KVY8TwObHRulP2MptnauTAizH7n/xDakfznlg9oDb3eec7sOspHvgr7X9osRshTD/+38w5e8ydOInUiwjuSMJFoj+Vdmxg9Y/j4yECL3yEAWHOSLTwDT8q3W+V+WzdpQWd97NNBFAtAkIwOCVvsACHFUc35cmH/6OCpIXCrl3gcOgz2TIZAzNMwY6YU7dIEWg1ODZs57hk3Uo+EpBOS1fZ3RcIzTBhX8e+IF61aITDa3dpYkuP6ZE9i5bpYh+0kjC0/cdUty6B7o/YsNofpRh+pNDTL//M1P8gkfLmXeFJXrK4T3zZ+Febu8ivGJynA9yV0w4AMblcPkpkjvDC98uSvuALisBn2c+5eraX+SVc9V9qfNOl2cA2gXG7E3catpJ7d1ZP4Q20//l17M66W9MSSyGWYX601tH6SYua/d42cXJCvd0E6MbAnKn5f/70XhPF/zPJIIr1OgbeN1sNKA+hoaJblr0/GmmCP1kdPjogJlO91pfOtJJSAUi93efz4iZN5amnZTOwnBkEH6v4JQWSoKT7Vdmfat6+J8foSZ4aMtGL9gzoHdqoTecw2OBSGW+K38geIHrH9LSGf65khZ003+48i6KCuldq+patip7qviubc/GCCfoyud37JOJjx/cXXX5qVe7ACqGLKCU8lbKg3dLF2WDAcHMPWzIQYB0NKhmc1MSqN8hfjLh7UsyQO5MDhECHjz2GxMyxWSPYX5PkYJj1+cidHkdzoKNwL/AbYCy2NKwa0si2QPDQektLT1r1yN2b9U5b7t7vwAeIHS8ZtiOx1W0A7CXMic7BlNOIsbSv6+VuPTpDy5hHBqa8FNDeDmqAM2LrAwiCAX7s/WZsnTAKbNEW5M6llKYIz6KUmhKMvkmo5E72CD31mzwyn2Rj0MvBNAtH3655pCFJX0FON9Y6FkJZqi24lb4Wznw9X8HoPgkUjF0OYVHRplYzY0zUnEeOGTvF/qabHr24em5JItS1d1/Z4SU3MVX2fI+HIOb6Igsjk9Wnb+GdE=
+    properties :
+     x : 234
+     y : 92
+     width : 331
+     height : 329
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : BTN_Fermer
+    identifier : 0x233bf9cd1edc5d5a
+    internal_properties : BwAAAAcAAAAYc877n3E2zl6/8R1PUXQk3UdWFrdqq82fOawC357MUsWW76Wevdv5HzKr0AEQV6MxUpH3Mskfh67DI6HrvojNWdZC+iTEYJy7H0TP8GxPPsami2btPYfyuIGSbiid3yDZDMCmRGciM1eYlmNA23WgoxuFp6V9AEIL482/KI8l6nctyF/pJKe7vgAgXcnARkgYLZUX0KsGdM5c4zUwyqB1ww9NnoOxwV8w7UVGz4vVwTXVYFgzp3Mus2JVmMwNqkB83Z4TLy+KvjkNb7ahQjTIvxkx+Be0WWeZsU+XIrtVoqLlEi59ZyDl8Y+KsZgUwZ7l3S6nxPQj77VDiuoLK1TW7SDH72apN1RAvu+klfIXeuaAsvxDpfuOXE82IaOwWf4cEB4PIzR/zNROsGwyRsUaIS1lbMWoNSFOj/U3N0SCGq/Om7b0Zs+JCDpAfqiJGdDhDMIzWTsvWLqA7Q9R4SXhnVZZTw5I/mdH6YzU9ZrPNdqZQJvJm+fk8k5dUbCLITHk2sssjQKyLaZRoFPfB59/Ci37wIHWc0YYkNGn29XMjICKeDZRk/hT5ua4/MdfdJsF1JCZug1xVSXBKGw+C76Yg6TTDNbLBAvDv+JAB/9wkJQqHDbcKr8DdFR5jcTZ596xl8CP/pMB1EkXKRc+mYxytKQHXoXSArjuQgrqzmViUvIUbyIO8y9mCgcqqvEFdnB4uLGVuIAoKwYNg8noPGr2EIdeYtH7lb0pFzhR0OSAoLe7sQbJDMJ2vuCWXd55TEKRI+vj8C8dwd+RvP764D3E+DZ8v4e3Lp3Th+izjWQk9HJVhBcbsLNNm+tw68m6f+fvHR0GMTN9UAg4B8P+6j9MqglmTGcITx+T2p/E7EFGNheQqFcwutbCjhbtsb0W1DXvpQjXfP0VV/iP+JfUByU/PwVaSrvK6lHs/fReG2g5DRw=
+    properties :
+     x : 250
+     y : 484
+     width : 299
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         FinProgramme()
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BwAAAAcAAABHivBqFH8xYQq/QELUltmClIuqm9KM3lg0XSaBAQ41WqT06R9JfU0qGK5sHUl8/xHCuvP3y9tLeLLOVaAgM2FjnfwSCRBgXqneLsHogwTYpIXuB1zp2uXtmOXYyGd6i+ek6BBvtJ0ylgF/MxkRihdZ26pl/9Jf5c+sxo07G0ZzHfcLEu9WD07gTSld25EPGWjvi/e5TxaHOZSRE8C5Ig+YdJawYdK89l+x1ofEmw3pfCNLUe3tNoiwg4AbC1jLdufmJ97Xc0JHDAy7gJsHBzEWwcuroqy2By4PJ4c6Wg==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BwAAAAcAAADG0006i3ptxMcUE+O5cGvDhb43eRlY9UEE1z/7izK93v/ToMiwACETQQw4eQhZuJRMFa6SBwwT+zSdDbdc5HEkXDob51ldPFNKsP+0MWY=
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+  procedures :
+   -
+     name : gProc_SeConnecterALaBDD
+     procedure_id : 1386024794433901232
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //gProc_SeConnecterALaBDD (<eP_Connexion> est eTypeConnexion)
+      //
+      // Paramètres :
+      //	eP_Connexion (eTypeConnexion) : <indiquez ici le rôle de LaConnexionEnCours>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // <Indiquez ici un exemple d'utilisation>
+      //
+      procédure gProc_SeConnecterALaBDD(eP_Connexion est un eTypeConnexion)
+      
+      
+      HChangeConnexion("*")
+      
+      selon eP_Connexion 
+      	CAS ConnexionLocale
+      		LaConnexionBDD..Serveur 
+      	CAS ConnexionServeur
+      		HChangeConnexion("*",)
+      		HChangeRep
+      		HPasse
+      		HOuvreConnexion
+      FIN
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BwAAAAcAAAARaqIs1pWWTrjJkc2sbefp8NGAHSVvdRgpQIePRe9rhkbpERRVEF+Nx8mIqTxrVGdwHX99jtU=
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x133bf7f401d6246a
+  internal_properties : BwAAAAcAAAAZ++HSz2luvwiNhadWl8v3mh2d0Pq0fCIps02kogrcwVHmCg==
+custom_note :
+ internal_properties : BwAAAAcAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BwAAAAcAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

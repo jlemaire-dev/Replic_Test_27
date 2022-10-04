@@ -1,0 +1,89 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FichierConfigIni
+ major_version : 27
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x133bfae101f393e7
+ internal_properties : BwAAAAcAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      FichierConfigIni est une Classe
+      	sNomFichierIni		est une chaîne		// Nom du fichier ini de configuration
+      	sCheminFichierIni	est une chaîne		// Chemin du stockage du fichier
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1385977154653950951
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      
+      
+      // Par défaut le fichier est nommé 'config.ini'
+      sNomFichierIni	= "config.ini"
+      // Par défaut le fichier est placé dans le dossier de l'exécutable 
+      sCheminFichierIni	= ComplèteRep(sCheminFichierIni)
+      
+      
+      //On créé le fichier que l'on déclare
+      ::CreationFichierSiInexistant()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1385977154654016487
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : CreationFichierSiInexistant
+     procedure_id : 1385981380901902279
+     type_code : 12
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] CreationFichierSiInexistant ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen : <indiquez ici le rôle de la valeur de retour>
+      //
+      // Exemple :
+      // <Indiquez ici un exemple d'utilisation>
+      //
+      procédure privée CreationFichierSiInexistant()
+      
+      bRetour est un booléen	= vrai
+      sCheminCompletFichier est une chaine = :sCheminFichierIni + :sNomFichierIni
+      
+      si PAS fFichierExiste(sCheminCompletFichier) ALORS
+      	si pas fCrée(sCheminCompletFichier) ALORS
+      		bRetour = faux
+      	FIN
+      FIN
+      
+      renvoyer bRetour
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BwAAAAcAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x133bfad901f0737e
+  internal_properties : BwAAAAcAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BwAAAAcAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
