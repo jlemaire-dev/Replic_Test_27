@@ -1,0 +1,3 @@
+//MO001-002.TXT ANA00001 TO ANA00002
+DOSS_DOSSIER		TAR	84	nouvelle taille enregistrement : 84
+DOSS_DOSSIER	DOSS_DATE_CREATION	CNW	Date et Heure (aaaammjjhhmmssccc)$Chaîne	la rubrique DOSS_DATE_CREATION a pour nouveau type Date et Heure (aaaammjjhhmmssc
